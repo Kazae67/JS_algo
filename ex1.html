@@ -17,6 +17,9 @@
 
     <p>Dans la phrase « Notre formation DL commence aujourd'hui » <br>remplacer le mot « aujourd’hui » par le mot « demain »</p>
     <button onclick ="ex3()">Resultat EX 3</button>
+
+    <p>Savoir si la phrase « Engage le jeu que je le gagne » est palindrome</p>
+    <button onclick ="ex4()">Resultat EX 4</button>
     
     <footer>
         <p id="resultat"></p>
@@ -35,7 +38,20 @@
                 var ex3 = "Notre formation DL commence aujourd'hui";
                 document.getElementById("resultat").innerHTML = ex3.replace("aujourd'hui","demain", ex3);
             }
+            
+            function ex4(){
+                document.getElementById("resultat").innerHTML = palindrome("Kay ak");
+                function palindrome(str){
+                    let strMin = str.toLowerCase();
+                    str = str.split(' ').join('');
+                    if(strMin.split(' ').reverse().join('') == strMin){
+                        return "Oui c'est un palindrome";
+                    } else {
+                        return "Non ce n'est pas un palindrome";
+                    }
+                }
 
+            }
         </script>
     </footer>
  </body>
