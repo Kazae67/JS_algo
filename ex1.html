@@ -1,1 +1,35 @@
- 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice 1</title>
+ </head>
+ <body>
+    <h1>JS ALGO</h1>
+
+    <button onclick ="ex1()">Resultat EX 1</button>
+    <p>Compter le nombre de caractères dans <br>« Notre formation DL commence aujourd'hui »</p>
+
+    <button onclick ="ex2()">Resultat EX 2</button>
+    <p>Compter le nombre de caractères dans <br>« Notre formation DL commence aujourd'hui »</p>
+    <p id="ex1"></p>
+    <p id="ex2"></p>
+
+
+    <footer>
+        <script>
+            function ex1(){
+                var ex1 = "Notre formation DL commence aujourd'hui";
+                document.getElementById("ex1").innerHTML = ex1.length;
+            }
+
+            function ex2(){
+                var ex2 = "Notre formation DL commence aujourd'hui";
+                document.getElementById("ex1").innerHTML = ex2.split(" ").length;
+            }
+        </script>
+    </footer>
+ </body>
+ </html>
