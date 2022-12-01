@@ -14,22 +14,28 @@
 
     <p>Compter le nombre de caractères dans <br>« Notre formation DL commence aujourd'hui »</p>
     <button onclick ="ex2()">Resultat EX 2</button>
+
+    <p>Dans la phrase « Notre formation DL commence aujourd'hui » <br>remplacer le mot « aujourd’hui » par le mot « demain »</p>
+    <button onclick ="ex3()">Resultat EX 3</button>
     
-    <p id="ex1"></p>
-    <p id="ex2"></p>
-
-
     <footer>
+        <p id="resultat"></p>
         <script>
             function ex1(){
                 var ex1 = "Notre formation DL commence aujourd'hui";
-                document.getElementById("ex1").innerHTML = ex1.length;
+                document.getElementById("resultat").innerHTML = ex1.length;
             }
 
             function ex2(){
                 var ex2 = "Notre formation DL commence aujourd'hui";
-                document.getElementById("ex1").innerHTML = ex2.split(" ").length;
+                document.getElementById("resultat").innerHTML = ex2.split(" ").length;
             }
+
+            function ex3(){
+                var ex3 = "Notre formation DL commence aujourd'hui";
+                document.getElementById("resultat").innerHTML = ex3.replace("aujourd'hui","demain", ex3);
+            }
+
         </script>
     </footer>
  </body>
