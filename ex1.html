@@ -40,17 +40,18 @@
             }
             
             function ex4(){
-                document.getElementById("resultat").innerHTML = palindrome("Kay ak");
+                document.getElementById("resultat").innerHTML = palindrome("Engage le jeu que je le gagne");
                 function palindrome(str){
-                    let strMin = str.toLowerCase();
-                    str = str.split(' ').join('');
-                    if(strMin.split(' ').reverse().join('') == strMin){
+                    // \W = non-word | g = global
+                    var char = /[\W_]/g;
+                    var lowStr = str.toLowerCase().replace(char, '');
+                    var reverseStr = lowStr.split('').reverse().join('');
+                    if(reverseStr === lowStr){
                         return "Oui c'est un palindrome";
                     } else {
                         return "Non ce n'est pas un palindrome";
                     }
                 }
-
             }
         </script>
     </footer>
