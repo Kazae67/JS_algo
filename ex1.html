@@ -27,6 +27,9 @@
     <p>Écrire un algorithme permettant de calculer un montant de facture à partir de la quantité
         d’articles, son prix hors taxe et un taux de TVA (exprimé en décimal. Ex : 20 % -> 0.2)</p>
     <button onclick ="ex6()">Resultat EX 6</button>
+
+    <p>Ecrire un algorithme permettant de renvoyer la catégorie d’un enfant en fonction de son âge</p>
+    <button onclick ="ex7()">Resultat EX 7</button>
     
     <footer>
         <p id="resultat"></p>
@@ -76,13 +79,27 @@
                 document.getElementById("resultat").innerHTML = " Prix unitaire de l’article " + prixHT + "€" + "<br>" 
                 + "Quantité : " + nbArticles + "<br>" + "Taux de TVA : " + TVA + "<br>" + "Le montant de la facture à régler est de : " + totalTTC;
             }
-            $prixHT = 9.99;
-            $nbArticles = 5;
-            $TVA = 0.20;
-            $totalHT = $nbArticles * $prixHT;
-            $totalTTC = $nbArticles * $prixHT * (1 + $TVA);
 
-
+            function ex7(){
+                var age = 6;
+                    if(age >= 13){
+                        document.getElementById("resultat").innerHTML = "Hors catégorie";
+                    }
+                    else if($age >= 12){
+                        document.getElementById("resultat").innerHTML = "Cadet";
+                    } else if(age >= 10){
+                        document.getElementById("resultat").innerHTML = "Minime";
+                    } else if(age >= 8) {
+                        document.getElementById("resultat").innerHTML =  "Pupille";
+                    } else if(age >= 6) {
+                        document.getElementById("resultat").innerHTML =  "Poussin ";
+                    } else {
+                        document.getElementById("resultat").innerHTML =  "Hors catégorie";
+                    }
+                }
+                
+            
+ 
         </script>
     </footer>
  </body>
