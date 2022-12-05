@@ -64,8 +64,23 @@
             function ex5(){
                 var franc = 100.00;
                 var euro = franc * 15.24;
-                document.getElementById("resultat").innerHTML = parseFloat(euro);
+                document.getElementById("resultat").innerHTML = "Montant en francs : " + franc + "<br>"+ franc + " francs = " + parseFloat(euro) + " Euro";
             }
+
+            function ex6(){
+                var prixHT = 9.99;
+                var nbArticles = 5;
+                var TVA = 0.20;
+                var totalHT = nbArticles * prixHT;
+                var totalTTC = nbArticles * prixHT * (1 + TVA);
+                document.getElementById("resultat").innerHTML = " Prix unitaire de l’article " + prixHT + "€" + "<br>" 
+                + "Quantité : " + nbArticles + "<br>" + "Taux de TVA : " + TVA + "<br>" + "Le montant de la facture à régler est de : " + totalTTC;
+            }
+            $prixHT = 9.99;
+            $nbArticles = 5;
+            $TVA = 0.20;
+            $totalHT = $nbArticles * $prixHT;
+            $totalTTC = $nbArticles * $prixHT * (1 + $TVA);
 
 
         </script>
