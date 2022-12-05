@@ -9,17 +9,24 @@
  <body>
     <h1>JS ALGO</h1>
 
-    <p>Compter le nombre de caractères dans <br>« Notre formation DL commence aujourd'hui »</p>
+    <p>Compter le nombre de caractères dans « Notre formation DL commence aujourd'hui »</p>
     <button onclick ="ex1()">Resultat EX 1</button>
 
-    <p>Compter le nombre de caractères dans <br>« Notre formation DL commence aujourd'hui »</p>
+    <p>Compter le nombre de caractères dans « Notre formation DL commence aujourd'hui »</p>
     <button onclick ="ex2()">Resultat EX 2</button>
 
-    <p>Dans la phrase « Notre formation DL commence aujourd'hui » <br>remplacer le mot « aujourd’hui » par le mot « demain »</p>
+    <p>Dans la phrase « Notre formation DL commence aujourd'hui » remplacer le mot « aujourd’hui » par le mot « demain »</p>
     <button onclick ="ex3()">Resultat EX 3</button>
 
     <p>Savoir si la phrase « Engage le jeu que je le gagne » est palindrome</p>
     <button onclick ="ex4()">Resultat EX 4</button>
+
+    <p>Écrire un algorithme qui convertie franc > euro</p>
+    <button onclick ="ex5()">Resultat EX 5</button>
+
+    <p>Écrire un algorithme permettant de calculer un montant de facture à partir de la quantité
+        d’articles, son prix hors taxe et un taux de TVA (exprimé en décimal. Ex : 20 % -> 0.2)</p>
+    <button onclick ="ex6()">Resultat EX 6</button>
     
     <footer>
         <p id="resultat"></p>
@@ -53,7 +60,15 @@
                     }
                 }
             }
+
+            function ex5(){
+                var franc = 100.00;
+                var euro = franc * 15.24;
+                document.getElementById("resultat").innerHTML = parseFloat(euro);
+            }
+
+
         </script>
     </footer>
  </body>
- </html> 
+ </html>  
