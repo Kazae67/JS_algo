@@ -12,7 +12,8 @@
     <p>Réaliser un algorithme permettant d’afficher le tableau HTML suivant (notez que le nom du pays
         s’affichera en majuscule et que le tableau est trié par ordre alphabétique du nom de pays) grâce à
         une fonction personnalisée.</p>
-    <button onclick ="exe2()">Resultat EX 2</button>
+    <p id="test1"></p>
+    <p id="test2"></p>
 
     <p>Afficher un lien hypertexte permettant d’accéder au site d’Elan Formation. Le lien devra s’ouvrir
         dans un nouvel onglet (_blank)</p>
@@ -44,23 +45,33 @@
         <footer>
             <p id="result"></p>
             <script>
-                function exe2(){
-                    const capitales = { 
-                        "France":"Paris", "Allemagne":"Berlin", "USA":"washington", "Italie" : "Rome"
-                    };
-                    const ordered = object.keys(capitales).sort().reduce(
-                        (obj, key) => {
-                            obj[key] = capitales[key];
-                           return obj;
-                        },
-                        {}
-                    );
+                function bySortedValue(obj, callback, context) {
+                    var capitales = [];
+                  
+                    for (var key in obj) capitales.push([key, obj[key]]);
+                  
+                    capitales.sort(function(a, b) {
+                      return a[1] < b[1] ? 1 : a[1] > b[1] ? -1 : 0
+                    });
+                  
+                    var length = capitales.length;
+                    while (length--) callback.call(context, capitales[length][0], capitales[length][1]);
+                  }
+                  
+                  bySortedValue({
+                    France: "Paris",
+                    Allemagne: "Berlin",
+                    Italie: "Rome",
+                    USA: "Washington",
+                  }, function(key, value) {
+                    document.getElementById('test1').innerHTML += `${key}: ${value}<br>`
+                  });
 
-                    console.log(JSON.stringify(ordered));
-                    
+            
+                
 
-                }
             </script>
+
         </footer>
 </body>
 </html>
