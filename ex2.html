@@ -41,8 +41,26 @@
         véhicule. </p>
     <button onclick ="exe13()">Resultat EX 13</button>
   
+        <footer>
+            <p id="result"></p>
+            <script>
+                function exe2(){
+                    const capitales = { 
+                        "France":"Paris", "Allemagne":"Berlin", "USA":"washington", "Italie" : "Rome"
+                    };
+                    const ordered = object.keys(capitales).sort().reduce(
+                        (obj, key) => {
+                            obj[key] = capitales[key];
+                           return obj;
+                        },
+                        {}
+                    );
 
+                    console.log(JSON.stringify(ordered));
+                    
 
-
+                }
+            </script>
+        </footer>
 </body>
 </html>
