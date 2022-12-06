@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>exercice 2</title>
 </head>
 <body>
     <h1>JS ALGO partie 2</h1>
@@ -16,7 +16,7 @@
 
     <p>Afficher un lien hypertexte permettant d’accéder au site d’Elan Formation. Le lien devra s’ouvrir
         dans un nouvel onglet (_blank)</p>
-    <button onclick ="exe3()">Resultat EX 3</button>
+    <button onclick ="exe3()">Accueil Elan-Formation</button>
 
     <p>Créer une fonction personnalisée permettant de créer un formulaire de champs de texte en
         précisant le nom des champs associés.</p>
@@ -66,6 +66,11 @@
                     document.getElementById('ex2').innerHTML += `${ville}: ${value}<br>`
                   });
 
+                  function exe3(){
+                    // location.href("https://elan-formation.eu/accueil") pour ouvrir dans la même page
+                    window.open("https://elan-formation.eu/accueil", "_blank");
+  
+                  }
 
                   
             </script>
