@@ -45,30 +45,27 @@
         <footer>
             <p id="result"></p>
             <script>
-                function bySortedValue(obj, callback, context) {
+                function ordreCapitales(pays, rappeler, ordre) {
                     var capitales = [];
                   
-                    for (var key in obj) capitales.push([key, obj[key]]);
+                    for (var ville in pays) capitales.push([ville, pays[ville]]);
                   
                     capitales.sort(function(a, b) {
                       return a[1] < b[1] ? 1 : a[1] > b[1] ? -1 : 0
                     });
                   
                     var length = capitales.length;
-                    while (length--) callback.call(context, capitales[length][0], capitales[length][1]);
+                    while (length--) rappeler.call(ordre, capitales[length][0], capitales[length][1]);
                   }
                   
-                  bySortedValue({
+                  ordreCapitales({
                     France: "Paris",
+                    USA: "Washington",
                     Allemagne: "Berlin",
                     Italie: "Rome",
-                    USA: "Washington",
-                  }, function(key, value) {
-                    document.getElementById('test1').innerHTML += `${key}: ${value}<br>`
+                  }, function(ville, value) {
+                    document.getElementById('test1').innerHTML += `${ville}: ${value}<br>`
                   });
-
-            
-                
 
             </script>
 
