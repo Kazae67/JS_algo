@@ -149,6 +149,22 @@
                    }
                }
 
+               function ex9(){
+                   let sexe = "homme";
+                   let age = 20;
+                    if (age >= 18 && age <= 35 && sexe == "femme"){
+                        document.getElementById("resultat").innerHTML = "Age : " + age + "<br>" + "Sexe : " + sexe + "<br> La personne est imposable"; 
+                    }
+                    else if (age >= 20 && sexe == "homme"){
+                        document.getElementById("resultat").innerHTML = "Age : " + age + "<br>" + "Sexe : " + sexe + "<br> La personne est imposable"; 
+                    }
+                    else{
+                        document.getElementById("resultat").innerHTML = "Age : " + age + "<br>" + "Sexe : " + sexe + "<br> Dégage"; 
+                    }
+                }
+               
+
+
        </script>
    </footer>
 </body>
