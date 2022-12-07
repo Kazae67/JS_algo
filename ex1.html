@@ -189,6 +189,37 @@
                     document.getElementById("resultat").innerHTML =  "Il y a " + total + " marques de voitures dans le tableau : " + marques;
                     } 
 
+                    
+                    function ex12(){
+                        var arr = { "Salut" : "Mickaël", "Hola" : "Virgile", "Hello": "Marie-Claire" };  
+                        for(var key in arr)
+                        {
+                          var value = arr[key];
+                          document.write(key + " = " + value + '<br>');
+                        }  
+                    }
+                    function ordreNoms(noms, rappeler, ordre) {
+                        var tableau = [];
+                      
+                        for (var langue in noms) tableau.push([langue, noms[langue]]);
+                      
+                        tableau.sort(function(a, b) {
+                          return a[1] < b[1] ? 1 : a[1] > b[1] ? -1 : 0
+                        });
+                      
+                        var length = tableau.length;
+                        while (length--) rappeler.call(ordre, tableau[length][0], tableau[length][1]);
+                      }
+                       
+                      ordreNoms({
+                        Salut: "Mickael",
+                        Hola: "Virgile",
+                        Hello: "Marie-Claire",
+                      }, function(langue, value) {
+                        console.log(`${langue}: ${value}`)
+                      });
+
+
 
        </script>
    </footer>
