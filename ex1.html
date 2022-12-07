@@ -78,21 +78,22 @@
    <footer>
        <p id="resultat"></p>
        <script>
+            // exercice 1
            function ex1(){
                var ex1 = "Notre formation DL commence aujourd'hui";
                document.getElementById("resultat").innerHTML = ex1.length;
            }
-
+           // exercice 2
            function ex2(){
                var ex2 = "Notre formation DL commence aujourd'hui";
                document.getElementById("resultat").innerHTML = ex2.split(" ").length;
            }
-
+           // exercice 3
            function ex3(){
                var ex3 = "Notre formation DL commence aujourd'hui";
                document.getElementById("resultat").innerHTML = ex3.replace("aujourd'hui","demain", ex3);
            }
-           
+           // exercice 4
            function ex4(){
                document.getElementById("resultat").innerHTML = palindrome("Engage le jeu que je le gagne");
                function palindrome(str){
@@ -107,13 +108,13 @@
                    }
                }
            }
- 
+           // exercice 5
            function ex5(){
                var franc = 100.00;
                var euro = franc * 15.24;
                document.getElementById("resultat").innerHTML = "Montant en francs : " + franc + "<br>"+ franc + " francs = " + parseFloat(euro) + " Euro";
            }
-
+           // exercice 6
            function ex6(){
                var prixHT = 9.99;
                var nbArticles = 5;
@@ -123,7 +124,7 @@
                document.getElementById("resultat").innerHTML = " Prix unitaire de l’article " + prixHT + "€" + "<br>" 
                + "Quantité : " + nbArticles + "<br>" + "Taux de TVA : " + TVA + "<br>" + "Le montant de la facture à régler est de : " + totalTTC;
            }
- 
+           // exercice 7
            function ex7(){
                var age = 10;
                    if(age >= 13){
@@ -141,102 +142,97 @@
                        document.getElementById("resultat").innerHTML =  "Hors catégorie";
                    }
                }
-
-               function ex8(){ 
-                   const number = parseInt(prompt('Entrez un entier (vérifiez la console): '));
-                   for(let i = 1; i <= 10; i++) {
-                       const result = i * number;
-                       console.log(`${number} * ${i} = ${result}`);
-                   }
-               }
-
-               function ex9(){
-                   let sexe = "homme";
-                   let age = 20;
-                    if (age >= 18 && age <= 35 && sexe == "femme"){
-                        document.getElementById("resultat").innerHTML = "Age : " + age + "<br>" + "Sexe : " + sexe + "<br> La personne est imposable"; 
-                    }
-                    else if (age >= 20 && sexe == "homme"){
-                        document.getElementById("resultat").innerHTML = "Age : " + age + "<br>" + "Sexe : " + sexe + "<br> La personne est imposable"; 
-                    }
-                    else{
-                        document.getElementById("resultat").innerHTML = "Age : " + age + "<br>" + "Sexe : " + sexe + "<br> Dégage"; 
-                    }
+            // exercice 8
+            function ex8(){ 
+                const number = parseInt(prompt('Entrez un entier (vérifiez la console): '));
+                for(let i = 1; i <= 10; i++) {
+                    const result = i * number;
+                    console.log(`${number} * ${i} = ${result}`);
                 }
-
-                function ex10(){
-                    var prix = 152;
-                    var verse = 200;
-                    var reste = verse - prix;
-                    
-                    var dix = Math.floor(reste / 10);
-                    var reste = reste % 10;
-                    var cinq = Math.floor(reste / 5);
-                    var reste = reste % 5;
-                    var deux = Math.floor(reste /2);
-                    var reste = reste % 2;
-                    var un = Math.floor(reste / 1);
-                    var reste = reste % 1;
-                    document.getElementById("resultat").innerHTML = "Rendue de monnaie : " + dix + " billet de 10€ - " + cinq + " billet de 5€ - " + deux + " pièce de 2€ - " + un + " pièce de 1€ <br>";
+            }
+            // exercice 9
+            function ex9(){
+                let sexe = "homme";
+                let age = 20;
+                if (age >= 18 && age <= 35 && sexe == "femme"){
+                    document.getElementById("resultat").innerHTML = "Age : " + age + "<br>" + "Sexe : " + sexe + "<br> La personne est imposable"; 
                 }
+                else if (age >= 20 && sexe == "homme"){
+                    document.getElementById("resultat").innerHTML = "Age : " + age + "<br>" + "Sexe : " + sexe + "<br> La personne est imposable"; 
+                }
+                else{
+                    document.getElementById("resultat").innerHTML = "Age : " + age + "<br>" + "Sexe : " + sexe + "<br> Dégage"; 
+                }
+            }
+            // exercice 10
+            function ex10(){
+                var prix = 152;
+                var verse = 200;
+                var reste = verse - prix;
+                
+                var dix = Math.floor(reste / 10);
+                var reste = reste % 10;
+                var cinq = Math.floor(reste / 5);
+                var reste = reste % 5;
+                var deux = Math.floor(reste /2);
+                var reste = reste % 2;
+                var un = Math.floor(reste / 1);
+                var reste = reste % 1;
+                document.getElementById("resultat").innerHTML = "Rendue de monnaie : " + dix + " billet de 10€ - " + cinq + " billet de 5€ - " + deux + " pièce de 2€ - " + un + " pièce de 1€ <br>";
+            }
 
+            // exercice 11
+            function ex11(){
+                let marques = ["Peugeot", " Renault", " BMW", " Mercedes"];
+                let total = 0;
+                for (let i = 0; i < marques.length; i++) {
+                    total++;
+                }
+                document.getElementById("resultat").innerHTML =  "Il y a " + total + " marques de voitures dans le tableau : " + marques;
+                } 
 
-                function ex11(){
-                    let marques = ["Peugeot", " Renault", " BMW", " Mercedes"];
-                    let total = 0;
-                    for (let i = 0; i < marques.length; i++) {
-                        total++;
-                    }
-                    document.getElementById("resultat").innerHTML =  "Il y a " + total + " marques de voitures dans le tableau : " + marques;
-                    } 
+            // exercice 12
+            function ex12(){
+                var arr = { "Salut" : "Mickaël", "Hola" : "Virgile", "Hello": "Marie-Claire" };  
+                for(var key in arr)
+                {
+                    var value = arr[key];
+                    document.write(key + " = " + value + '<br>');
+                }  
+            }
+            function ordreNoms(noms, rappeler, ordre) {
+                var tableau = [];
+                for (var langue in noms) tableau.push([langue, noms[langue]]);
+                
+                tableau.sort(function(a, b) {
+                    return a[1] < b[1] ? 1 : a[1] > b[1] ? -1 : 0
+                });
+                
+                var length = tableau.length;
+                while (length--) rappeler.call(ordre, tableau[length][0], tableau[length][1]);
+                }
+            // exercice 12 (variante)   
+                ordreNoms({
+                Salut: "Mickael",
+                Hola: "Virgile",
+                Hello: "Marie-Claire",
+                }, function(langue, value) {
+                console.log(`${langue}: ${value}`)
+                });
 
-                    
-                    function ex12(){
-                        var arr = { "Salut" : "Mickaël", "Hola" : "Virgile", "Hello": "Marie-Claire" };  
-                        for(var key in arr)
-                        {
-                          var value = arr[key];
-                          document.write(key + " = " + value + '<br>');
-                        }  
-                    }
-                    function ordreNoms(noms, rappeler, ordre) {
-                        var tableau = [];
-                      
-                        for (var langue in noms) tableau.push([langue, noms[langue]]);
-                      
-                        tableau.sort(function(a, b) {
-                          return a[1] < b[1] ? 1 : a[1] > b[1] ? -1 : 0
-                        });
-                      
-                        var length = tableau.length;
-                        while (length--) rappeler.call(ordre, tableau[length][0], tableau[length][1]);
-                      }
-                       
-                      ordreNoms({
-                        Salut: "Mickael",
-                        Hola: "Virgile",
-                        Hello: "Marie-Claire",
-                      }, function(langue, value) {
-                        console.log(`${langue}: ${value}`)
-                      });
+            // exercice 13
+            notes = [10, 12, 8, 19, 3, 16, 11, 13, 9];
+            function moyenne(tableau) {
+                var total = 0;
+                var count = 0;
 
-
-                          notes = [10, 12, 8, 19, 3, 16, 11, 13, 9];
-                        function moyenne(tableau) {
-                            var total = 0;
-                            var count = 0;
-    
-                            tableau.forEach(function(item, index) {
-                                total += item;
-                                count++;
-                            });
-                            return total / count;
-                        }
-                        console.log(Math.round(moyenne(notes)*100)/100);
-
-                      
-
-               
+                tableau.forEach(function(item, index) {
+                    total += item;
+                    count++;
+                });
+                return total / count;
+            }
+            console.log(Math.round(moyenne(notes)*100)/100);
 
        </script>
    </footer>
