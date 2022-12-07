@@ -9,23 +9,49 @@
 <body>
     <h1>JS ALGO partie 2</h1>
 
+    <h3><b>Exercice 2</b></h3>
     <p>Réaliser un algorithme permettant d’afficher le tableau HTML suivant (notez que le nom du pays
         s’affichera en majuscule et que le tableau est trié par ordre alphabétique du nom de pays) grâce à
         une fonction personnalisée.</p>
     <p id="ex2"></p>
 
+    <h3><b>Exercice 3</b></h3>
     <p>Afficher un lien hypertexte permettant d’accéder au site d’Elan Formation. Le lien devra s’ouvrir
         dans un nouvel onglet (_blank)</p>
-    <button onclick ="exe3()">Accueil Elan-Formation</button>
+    <button onclick ="exe3()">Lien Elan Formation</button>
 
+    <h3><b>Exercice 5</b></h3>
     <p>Créer une fonction personnalisée permettant de créer un formulaire de champs de texte en
         précisant le nom des champs associés.</p>
-    <button onclick ="exe5()">Resultat EX 5</button>
 
+    <FORM NAME="nom">
+        <INPUT TYPE="text" placeholder="NOM" onfocus="this.placeholder = ''" onblur="this.placeholder = 'NOM'" NAME="input" VALUE="">
+        <INPUT TYPE="button" NAME="bouton" VALUE="Contrôler" onClick="_name(nom)">
+    </FORM>
+    <FORM NAME="prénom">
+        <INPUT TYPE="text" placeholder="PRÉNOM" onfocus="this.placeholder = ''" onblur="this.placeholder = 'PRÉNOM'" NAME="input" VALUE="">
+        <INPUT TYPE="button" NAME="bouton" VALUE="Contrôler" onClick="_prenom(prénom)">
+    </FORM>
+    <FORM NAME="ville">
+        <INPUT TYPE="text" placeholder="VILLE" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VILLE'" NAME="input" VALUE="">
+        <INPUT TYPE="button" NAME="bouton" VALUE="Contrôler" onClick="_ville(ville)">
+    </FORM>
+    
+    <h3>Exercice 7</h3>
+    <p>Créer une fonction personnalisée permettant de générer des cases à cocher. On pourra préciser dans le tableau associatif si la case est cochée ou non.
+        <FORM NAME="form4">
+            <INPUT TYPE="CHECKBOX" NAME="check1" VALUE="1">Choix numéro 1<BR>
+            <INPUT TYPE="CHECKBOX" NAME="check2" VALUE="2">Choix numéro 2<BR>
+            <INPUT TYPE="CHECKBOX" NAME="check3" VALUE="3">Choix numéro 3<BR>
+            <INPUT TYPE="CHECKBOX" NAME="check4" VALUE="4">Choix numéro 4<BR>
+            <INPUT TYPE="button"NAME="but" VALUE="Récapituler" onClick="reponse(form4)">
+            </FORM>
+    <h3><b>Exercice 8</b></h3>
     <p>Soit l’URL suivante : http://my.mobirise.com/data/userpic/764.jpg
         Créer une fonction personnalisée permettant d’afficher l’image N fois à l’écran</p>
     <button onclick ="exe8()">Resultat EX 8</button>
 
+    <h3><b>Exercice 10</b></h3>
     <p>En utilisant l’ensemble des fonctions personnalisées crées précédemment, créer un formulaire
         complet qui contient les informations suivantes : champs de texte avec nom, prénom, adresse email, ville, sexe et une liste de choix parmi lesquels on pourra sélectionner un intitulé de formation :
         « Développeur Logiciel », « Designer web », « Intégrateur » ou « Chef de projet ».
@@ -34,6 +60,7 @@
         </p>
     <button onclick ="exe10()">Resultat EX 10</button>
 
+    <h3><b>Exercice 13</b></h3>
     <p>Créer une classe Voiture possédant les propriétés suivantes : marque, modèle, nbPortes et
         vitesseActuelle ainsi que les méthodes demarrer( ), accelerer( ) et stopper( ) en plus
         des accesseurs (get) et mutateurs (set) traditionnels. La vitesse initiale de chaque véhicule
@@ -44,6 +71,7 @@
         <footer>
             <p id="result"></p>
             <script>
+                // Exercice 3
                 function ordreCapitales(pays, rappeler, ordre) {
                     var capitales = [];
                   
@@ -66,15 +94,43 @@
                     document.getElementById('ex2').innerHTML += `${ville}: ${value}<br>`
                   });
 
-                  function exe3(){
-                    // location.href("https://elan-formation.eu/accueil") pour ouvrir dans la même page
+                function exe3(){
+                // location.href("https://elan-formation.eu/accueil") pour ouvrir dans la même page
                     window.open("https://elan-formation.eu/accueil", "_blank");
   
                   }
 
-                let champs = ['Nom','Prénom','Ville'];
-                console.log(champs);
-                
+                // Exercice 4
+                function _name(nom){
+                    var _nom = document.nom.input.value;
+                    alert("Nom : " + _nom);
+                }
+
+                function _prenom(prénom){
+                    var test = document.prénom.input.value;
+                    alert("Prénom : " + test);
+                }
+
+                function _ville(ville){
+                    var test = document.ville.input.value;
+                    alert("Ville : " + test);
+                }
+
+                // Exercice 7
+                function reponse(form4) {
+                    if ( (form4.check1.checked) == true){ 
+                        alert("Choix 1") 
+                    }
+                    if ( (form4.check2.checked) == true){
+                        alert("Choix 2") 
+                    }
+                    if ( (form4.check3.checked) == true){
+                        alert("Choix 3") 
+                    }
+                    if ( (form4.check4.checked) == true){
+                        alert("Choix 4") 
+                    }
+                }
 
 
             </script>
