@@ -1,115 +1,122 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exercice 1</title>
- </head>
- <body>
-    <h1>JS ALGO</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>exercice 1</title>
+</head>
+<body>
 
-    <p>Compter le nombre de caractères dans « Notre formation DL commence aujourd'hui »</p>
-    <button onclick ="ex1()">Resultat EX 1</button>
+   <h1>JS ALGO partie 1</h1>
 
-    <p>Compter le nombre de caractères dans « Notre formation DL commence aujourd'hui »</p>
-    <button onclick ="ex2()">Resultat EX 2</button>
+   <p>Compter le nombre de caractères dans « Notre formation DL commence aujourd'hui »</p>
+   <button onclick ="ex1()">Resultat EX 1</button>
 
-    <p>Dans la phrase « Notre formation DL commence aujourd'hui » remplacer le mot « aujourd’hui » par le mot « demain »</p>
-    <button onclick ="ex3()">Resultat EX 3</button>
+   <p>Compter le nombre de caractères dans « Notre formation DL commence aujourd'hui »</p>
+   <button onclick ="ex2()">Resultat EX 2</button>
 
-    <p>Savoir si la phrase « Engage le jeu que je le gagne » est palindrome</p>
-    <button onclick ="ex4()">Resultat EX 4</button>
+   <p>Dans la phrase « Notre formation DL commence aujourd'hui » remplacer le mot « aujourd’hui » par le mot « demain »</p>
+   <button onclick ="ex3()">Resultat EX 3</button>
 
-    <p>Écrire un algorithme qui convertie franc > euro</p>
-    <button onclick ="ex5()">Resultat EX 5</button>
+   <p>Savoir si la phrase « Engage le jeu que je le gagne » est palindrome</p>
+   <button onclick ="ex4()">Resultat EX 4</button>
 
-    <p>Écrire un algorithme permettant de calculer un montant de facture à partir de la quantité
-        d’articles, son prix hors taxe et un taux de TVA (exprimé en décimal. Ex : 20 % -> 0.2)</p>
-    <button onclick ="ex6()">Resultat EX 6</button>
+   <p>Écrire un algorithme qui convertie franc > euro</p>
+   <button onclick ="ex5()">Resultat EX 5</button>
 
-    <p>Ecrire un algorithme permettant de renvoyer la catégorie d’un enfant en fonction de son âge</p>
-    <button onclick ="ex7()">Resultat EX 7</button>
+   <p>Écrire un algorithme permettant de calculer un montant de facture à partir de la quantité
+       d’articles, son prix hors taxe et un taux de TVA (exprimé en décimal. Ex : 20 % -> 0.2)</p>
+   <button onclick ="ex6()">Resultat EX 6</button>
 
-    <p>Ecrire un algorithme qui renvoie la table de multiplication d’un nombre passé en paramètre</p>
-    <button onclick ="ex8()">Resultat EX 8</button>
-    
-    <footer>
-        <p id="resultat"></p>
-        <script>
-            function ex1(){
-                var ex1 = "Notre formation DL commence aujourd'hui";
-                document.getElementById("resultat").innerHTML = ex1.length;
-            }
+   <p>Ecrire un algorithme permettant de renvoyer la catégorie d’un enfant en fonction de son âge</p>
+   <button onclick ="ex7()">Resultat EX 7</button>
 
-            function ex2(){
-                var ex2 = "Notre formation DL commence aujourd'hui";
-                document.getElementById("resultat").innerHTML = ex2.split(" ").length;
-            }
+   <p>Ecrire un algorithme qui renvoie la table de multiplication d’un nombre passé en paramètre</p>
+   <button onclick ="ex8()">Resultat EX 8</button>
 
-            function ex3(){
-                var ex3 = "Notre formation DL commence aujourd'hui";
-                document.getElementById("resultat").innerHTML = ex3.replace("aujourd'hui","demain", ex3);
-            }
-            
-            function ex4(){
-                document.getElementById("resultat").innerHTML = palindrome("Engage le jeu que je le gagne");
-                function palindrome(str){
-                    // \W = non-word | g = global
-                    var char = /[\W_]/g;
-                    var lowStr = str.toLowerCase().replace(char, '');
-                    var reverseStr = lowStr.split('').reverse().join('');
-                    if(reverseStr === lowStr){
-                        return "Oui c'est un palindrome";
-                    } else {
-                        return "Non ce n'est pas un palindrome";
-                    }
-                }
-            }
 
-            function ex5(){
-                var franc = 100.00;
-                var euro = franc * 15.24;
-                document.getElementById("resultat").innerHTML = "Montant en francs : " + franc + "<br>"+ franc + " francs = " + parseFloat(euro) + " Euro";
-            }
+   <p>Nous souhaitons savoir si une personne est imposable en fonction de son âge et de son sexe.
+       Si la personne est une femme dont l’âge est compris entre 18 et 35 ans ou si c’est un homme de
+       plus de 20 ans, alors celle-ci est imposable (sinon ce n’est pas le cas, « non imposable »).</p>
+   <button onclick ="ex8()">Resultat EX 9</button>
+   
+   <footer>
+       <p id="resultat"></p>
+       <script>
+           function ex1(){
+               var ex1 = "Notre formation DL commence aujourd'hui";
+               document.getElementById("resultat").innerHTML = ex1.length;
+           }
 
-            function ex6(){
-                var prixHT = 9.99;
-                var nbArticles = 5;
-                var TVA = 0.20;
-                var totalHT = nbArticles * prixHT;
-                var totalTTC = nbArticles * prixHT * (1 + TVA);
-                document.getElementById("resultat").innerHTML = " Prix unitaire de l’article " + prixHT + "€" + "<br>" 
-                + "Quantité : " + nbArticles + "<br>" + "Taux de TVA : " + TVA + "<br>" + "Le montant de la facture à régler est de : " + totalTTC;
-            }
+           function ex2(){
+               var ex2 = "Notre formation DL commence aujourd'hui";
+               document.getElementById("resultat").innerHTML = ex2.split(" ").length;
+           }
 
-            function ex7(){
-                var age = 10;
-                    if(age >= 13){
-                        document.getElementById("resultat").innerHTML = "Hors catégorie";
-                    }
-                    else if(age >= 12){
-                        document.getElementById("resultat").innerHTML = "L'enfant qui a " + age + " ans appartient à la catégorie « Cadet »";
-                    } else if(age >= 10){
-                        document.getElementById("resultat").innerHTML = "L'enfant qui a " + age + " ans appartient à la catégorie « Minime »";
-                    } else if(age >= 8) {
-                        document.getElementById("resultat").innerHTML =  "L'enfant qui a " + age + " ans appartient à la catégorie « Pupille »";
-                    } else if(age >= 6) {
-                        document.getElementById("resultat").innerHTML =  "L'enfant qui a " + age + " ans appartient à la catégorie « Poussin »";;
-                    } else {
-                        document.getElementById("resultat").innerHTML =  "Hors catégorie";
-                    }
-                }
+           function ex3(){
+               var ex3 = "Notre formation DL commence aujourd'hui";
+               document.getElementById("resultat").innerHTML = ex3.replace("aujourd'hui","demain", ex3);
+           }
+           
+           function ex4(){
+               document.getElementById("resultat").innerHTML = palindrome("Engage le jeu que je le gagne");
+               function palindrome(str){
+                   // \W = non-word | g = global
+                   var char = /[\W_]/g;
+                   var lowStr = str.toLowerCase().replace(char, '');
+                   var reverseStr = lowStr.split('').reverse().join('');
+                   if(reverseStr === lowStr){
+                       return "Oui c'est un palindrome";
+                   } else {
+                       return "Non ce n'est pas un palindrome";
+                   }
+               }
+           }
+ 
+           function ex5(){
+               var franc = 100.00;
+               var euro = franc * 15.24;
+               document.getElementById("resultat").innerHTML = "Montant en francs : " + franc + "<br>"+ franc + " francs = " + parseFloat(euro) + " Euro";
+           }
 
-                function ex8(){ 
-                    const number = parseInt(prompt('Entrez un entier: '));
-                    for(let i = 1; i <= 10; i++) {
-                        const result = i * number;
-                        console.log(`${number} * ${i} = ${result}`);
-                    }
-                }
+           function ex6(){
+               var prixHT = 9.99;
+               var nbArticles = 5;
+               var TVA = 0.20;
+               var totalHT = nbArticles * prixHT;
+               var totalTTC = nbArticles * prixHT * (1 + TVA);
+               document.getElementById("resultat").innerHTML = " Prix unitaire de l’article " + prixHT + "€" + "<br>" 
+               + "Quantité : " + nbArticles + "<br>" + "Taux de TVA : " + TVA + "<br>" + "Le montant de la facture à régler est de : " + totalTTC;
+           }
+ 
+           function ex7(){
+               var age = 10;
+                   if(age >= 13){
+                       document.getElementById("resultat").innerHTML = "Hors catégorie";
+                   }
+                   else if(age >= 12){
+                       document.getElementById("resultat").innerHTML = "L'enfant qui a " + age + " ans appartient à la catégorie « Cadet »";
+                   } else if(age >= 10){
+                       document.getElementById("resultat").innerHTML = "L'enfant qui a " + age + " ans appartient à la catégorie « Minime »";
+                   } else if(age >= 8) {
+                       document.getElementById("resultat").innerHTML =  "L'enfant qui a " + age + " ans appartient à la catégorie « Pupille »";
+                   } else if(age >= 6) {
+                       document.getElementById("resultat").innerHTML =  "L'enfant qui a " + age + " ans appartient à la catégorie « Poussin »";;
+                   } else {
+                       document.getElementById("resultat").innerHTML =  "Hors catégorie";
+                   }
+               }
 
-        </script>
-    </footer>
- </body>
- </html>  
+               function ex8(){ 
+                   const number = parseInt(prompt('Entrez un entier: '));
+                   for(let i = 1; i <= 10; i++) {
+                       const result = i * number;
+                       console.log(`${number} * ${i} = ${result}`);
+                   }
+               }
+
+       </script>
+   </footer>
+</body>
+</html>  
