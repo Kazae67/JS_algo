@@ -59,11 +59,23 @@
             <INPUT TYPE="CHECKBOX" NAME="check4" VALUE="4">Choix numéro 4<BR>
             <INPUT TYPE="button"NAME="but" VALUE="Récapituler" onClick="reponse(form4)">
         </FORM>
+
     <h3><b>Exercice 8</b></h3>
     <p>Soit l’URL suivante : http://my.mobirise.com/data/userpic/764.jpg
         Créer une fonction personnalisée permettant d’afficher l’image N fois à l’écran</p>
     <button onclick ="exe8()">Resultat EX 8</button>
 
+    <h3><b>Exercice 9</b></h3>
+    <p>Créer une fonction personnalisée permettant d’afficher des boutons radio avec un tableau de
+        valeurs en paramètre ("Monsieur","Madame","Mademoiselle").</p>
+    Entrez votre choix :
+    <FORM NAME="form3">
+    <INPUT TYPE="radio" NAME="choix" VALUE="1">Masculin<BR>
+    <INPUT TYPE="radio" NAME="choix" VALUE="2">Féminin<BR>
+    <INPUT TYPE="radio" NAME="choix" VALUE="3">Autre<BR>
+    <INPUT TYPE="button"NAME="but" VALUE="Afficher votre genre" onClick="choixprop(form3)">
+    </FORM>
+    
     <h3><b>Exercice 10</b></h3>
     <p>En utilisant l’ensemble des fonctions personnalisées crées précédemment, créer un formulaire
         complet qui contient les informations suivantes : champs de texte avec nom, prénom, adresse email, ville, sexe et une liste de choix parmi lesquels on pourra sélectionner un intitulé de formation :
@@ -148,6 +160,13 @@
                         alert("Choix 4") 
                     }
                 }
+
+                // Exercice 9
+                function choixprop(form3) {
+                    if (form3.choix[0].checked) { alert("Vous êtes un grand garçon") };
+                    if (form3.choix[1].checked) { alert("Salutation gente dame ")};
+                    if (form3.choix[2].checked) { alert("Il faudrait bien trouver un jour")};
+                    }
 
 
             </script>
