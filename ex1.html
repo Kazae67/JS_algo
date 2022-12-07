@@ -179,11 +179,15 @@
                     document.getElementById("resultat").innerHTML = "Rendue de monnaie : " + dix + " billet de 10€ - " + cinq + " billet de 5€ - " + deux + " pièce de 2€ - " + un + " pièce de 1€ <br>";
                 }
 
+
                 function ex11(){
-                    var marques = ["Peugeot", " Renault", " BMW", " Mercedes"];
-                        document.getElementById("resultat").innerHTML = marques;
+                    let marques = ["Peugeot", " Renault", " BMW", " Mercedes"];
+                    let total = 0;
+                    for (let i = 0; i < marques.length; i++) {
+                        total++;
                     }
-                
+                    document.getElementById("resultat").innerHTML =  "Il y a " + total + " marques de voitures dans le tableau : " + marques;
+                    } 
 
 
        </script>
