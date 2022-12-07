@@ -162,8 +162,22 @@
                         document.getElementById("resultat").innerHTML = "Age : " + age + "<br>" + "Sexe : " + sexe + "<br> Dégage"; 
                     }
                 }
-               
 
+                function ex10(){
+                    var prix = 152;
+                    var verse = 200;
+                    var reste = verse - prix;
+                    
+                    var dix = Math.floor(reste / 10);
+                    var reste = reste % 10;
+                    var cinq = Math.floor(reste / 5);
+                    var reste = reste % 5;
+                    var deux = Math.floor(reste /2);
+                    var reste = reste % 2;
+                    var un = Math.floor(reste / 1);
+                    var reste = reste % 1;
+                    document.getElementById("resultat").innerHTML = "Rendue de monnaie : " + dix + " billet de 10€ - " + cinq + " billet de 5€ - " + deux + " pièce de 2€ - " + un + " pièce de 1€ <br>";
+                }
 
        </script>
    </footer>
