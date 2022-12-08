@@ -63,8 +63,8 @@
     <h1><b>Exercice 8</b></h1>
     <p>Soit l’URL suivante : http://my.mobirise.com/data/userpic/764.jpg
         Créer une fonction personnalisée permettant d’afficher l’image N fois à l’écran</p>
-    <button onclick ="exe8()">Resultat EX 8</button>
-
+    <div class="container" id="imageChien"></div>
+    
     <h1><b>Exercice 9</b></h1>
     <p>Créer une fonction personnalisée permettant d’afficher des boutons radio avec un tableau de
         valeurs en paramètre ("Monsieur","Madame","Mademoiselle").</p>
@@ -178,7 +178,7 @@
                 function liste(form5) {
                     if (form5.list[0].selected) { alert("Vous êtes un homme")};
                     if (form5.list[1].selected) { alert("Vous êtes une femme")};
-                    if (form5.list[2].selected) { alert("Vous en savez rien")};
+                    if (form5.list[2].selected) { alert("Vous êtes une demoiselle")};
                     }
 
                 // Exercice 7
@@ -196,6 +196,12 @@
                         alert("Choix 4") 
                     }
                 }
+
+                // Exercice 8
+                let url_chien = "<img src='http://my.mobirise.com/data/userpic/764.jpg'>";
+                let result = url_chien.repeat(4);
+                
+                document.getElementById("imageChien").innerHTML = result;
 
                 // Exercice 9
                 function choixprop(form3) {
@@ -231,15 +237,18 @@
                     if (formGenre.choix[0].checked) { alert("Vous êtes un grand garçon") };
                     if (formGenre.choix[1].checked) { alert("Salutation gente dame ")};
                     if (formGenre.choix[2].checked) { alert("Il faudrait bien trouver un jour")};
-                    }
+                }
 
                 function _liste(choixJob) {
                     if (choixJob.list[0].selected) { alert("Vous êtes un Développeur en Logiciel")};
                     if (choixJob.list[1].selected) { alert("Vous êtes Designer web")};
                     if (choixJob.list[2].selected) { alert("Vous êtes Intégrateur")};
                     if (choixJob.list[3].selected) { alert("Vous êtes Chef de projet")};
-
                 }
+
+               
+
+                </script>
 
             </script>
 
