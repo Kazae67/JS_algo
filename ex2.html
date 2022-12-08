@@ -68,7 +68,7 @@
     <h1><b>Exercice 9</b></h1>
     <p>Créer une fonction personnalisée permettant d’afficher des boutons radio avec un tableau de
         valeurs en paramètre ("Monsieur","Madame","Mademoiselle").</p>
-    Entrez votre choix :
+    Selectionnez votre choix :
     <FORM NAME="form3">
     <INPUT TYPE="radio" NAME="choix" VALUE="1">Masculin<BR>
     <INPUT TYPE="radio" NAME="choix" VALUE="2">Féminin<BR>
@@ -98,6 +98,14 @@
         <FORM NAME="town">
             <INPUT TYPE="text" placeholder="VILLE" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VILLE'" NAME="input" VALUE="">
             <INPUT TYPE="button" NAME="bouton" VALUE="Contrôler" onClick="_town(town)">
+        </FORM>
+
+        
+        <FORM NAME="formGenre"><br>
+        <INPUT TYPE="radio" NAME="choix" VALUE="1">Homme
+        <INPUT TYPE="radio" NAME="choix" VALUE="2">Femme
+        <INPUT TYPE="radio" NAME="choix" VALUE="3">Autre
+        <INPUT TYPE="button"NAME="but" VALUE="Afficher votre genre" onClick="choixGenre(formGenre)">
         </FORM>
 
     <h1><b>Exercice 13</b></h1>
@@ -184,6 +192,8 @@
                     }
 
                 // Exercice 10
+
+                // Champs
                 function _name(name){
                     var name = document.name.input.value;
                     alert("Nom : " + name);
@@ -202,6 +212,13 @@
                     var test = document.town.input.value;
                     alert("Ville : " + test);
                 }
+
+                // Radio
+                function choixGenre(form3) {
+                    if (formGenre.choix[0].checked) { alert("Vous êtes un grand garçon") };
+                    if (formGenre.choix[1].checked) { alert("Salutation gente dame ")};
+                    if (formGenre.choix[2].checked) { alert("Il faudrait bien trouver un jour")};
+                    }
 
 
             </script>
