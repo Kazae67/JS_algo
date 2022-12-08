@@ -26,11 +26,11 @@
 
     <FORM NAME="nom">
         <INPUT TYPE="text" placeholder="NOM" onfocus="this.placeholder = ''" onblur="this.placeholder = 'NOM'" NAME="input" VALUE="">
-        <INPUT TYPE="button" NAME="bouton" VALUE="Contrôler" onClick="_name(nom)">
+        <INPUT TYPE="button" NAME="bouton" VALUE="Contrôler" onClick="_nom(nom)">
     </FORM>
-    <FORM NAME="prénom">
+    <FORM NAME="prenom">
         <INPUT TYPE="text" placeholder="PRÉNOM" onfocus="this.placeholder = ''" onblur="this.placeholder = 'PRÉNOM'" NAME="input" VALUE="">
-        <INPUT TYPE="button" NAME="bouton" VALUE="Contrôler" onClick="_prenom(prénom)">
+        <INPUT TYPE="button" NAME="bouton" VALUE="Contrôler" onClick="_prenom(prenom)">
     </FORM>
     <FORM NAME="ville">
         <INPUT TYPE="text" placeholder="VILLE" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VILLE'" NAME="input" VALUE="">
@@ -83,7 +83,22 @@
         Le formulaire devra également comporter un bouton permettant de le soumettre à un traitement
         de validation (submit).
         </p>
-    <button onclick ="exe10()">Resultat EX 10</button>
+        <FORM NAME="name">
+            <INPUT TYPE="text" placeholder="NOM" onfocus="this.placeholder = ''" onblur="this.placeholder = 'NOM'" NAME="input" VALUE="">
+            <INPUT TYPE="button" NAME="bouton" VALUE="Contrôler" onClick="_name(name)">
+        </FORM>
+        <FORM NAME="nickname">
+            <INPUT TYPE="text" placeholder="PRÉNOM" onfocus="this.placeholder = ''" onblur="this.placeholder = 'PRÉNOM'" NAME="input" VALUE="">
+            <INPUT TYPE="button" NAME="bouton" VALUE="Contrôler" onClick="_nickname(nickname)">
+        </FORM>
+        <FORM NAME="email">
+            <INPUT TYPE="text" placeholder="EMAIL" onfocus="this.placeholder = ''" onblur="this.placeholder = 'EMAIL'" NAME="input" VALUE="">
+            <INPUT TYPE="button" NAME="bouton" VALUE="Contrôler" onClick="_email(email)">
+        </FORM>
+        <FORM NAME="town">
+            <INPUT TYPE="text" placeholder="VILLE" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VILLE'" NAME="input" VALUE="">
+            <INPUT TYPE="button" NAME="bouton" VALUE="Contrôler" onClick="_town(town)">
+        </FORM>
 
     <h1><b>Exercice 13</b></h1>
     <p>Créer une classe Voiture possédant les propriétés suivantes : marque, modèle, nbPortes et
@@ -126,13 +141,13 @@
                   }
 
                 // Exercice 5
-                function _name(nom){
+                function _nom(nom){
                     var _nom = document.nom.input.value;
                     alert("Nom : " + _nom);
                 }
 
-                function _prenom(prénom){
-                    var test = document.prénom.input.value;
+                function _prenom(prenom){
+                    var test = document.prenom.input.value;
                     alert("Prénom : " + test);
                 }
 
@@ -167,6 +182,26 @@
                     if (form3.choix[1].checked) { alert("Salutation gente dame ")};
                     if (form3.choix[2].checked) { alert("Il faudrait bien trouver un jour")};
                     }
+
+                // Exercice 10
+                function _name(name){
+                    var name = document.name.input.value;
+                    alert("Nom : " + name);
+                }
+
+                function _nickname(nickname){
+                    var nickname = document.nickname.input.value;
+                    alert("Prénom : " + nickname);
+                }
+                function _email(email){
+                    var email = document.email.input.value;
+                    alert("Email : " + email);
+                }
+
+                function _town(town){
+                    var test = document.town.input.value;
+                    alert("Ville : " + test);
+                }
 
 
             </script>
