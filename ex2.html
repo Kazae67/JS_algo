@@ -69,10 +69,10 @@
     <p>Créer une fonction personnalisée permettant d’afficher des boutons radio avec un tableau de
         valeurs en paramètre ("Monsieur","Madame","Mademoiselle").</p>
     Selectionnez votre choix :
-    <FORM NAME="form3">
+    <FORM NAME="form3"><BR>
     <INPUT TYPE="radio" NAME="choix" VALUE="1">Masculin<BR>
     <INPUT TYPE="radio" NAME="choix" VALUE="2">Féminin<BR>
-    <INPUT TYPE="radio" NAME="choix" VALUE="3">Autre<BR>
+    <INPUT TYPE="radio" NAME="choix" VALUE="3">Autre<BR><BR>
     <INPUT TYPE="button"NAME="but" VALUE="Afficher votre genre" onClick="choixprop(form3)">
     </FORM>
     
@@ -105,7 +105,17 @@
         <INPUT TYPE="radio" NAME="choix" VALUE="1">Homme
         <INPUT TYPE="radio" NAME="choix" VALUE="2">Femme
         <INPUT TYPE="radio" NAME="choix" VALUE="3">Autre
-        <INPUT TYPE="button"NAME="but" VALUE="Afficher votre genre" onClick="choixGenre(formGenre)">
+        <INPUT TYPE="button"NAME="butt" VALUE="Afficher  genre" onClick="choixGenre(formGenre)">
+        </FORM>
+
+        <FORM NAME="choixJob"><br>
+            <SELECT NAME="list">
+                <OPTION VALUE="1">Développeur Logiciel
+                <OPTION VALUE="2">Designer web
+                <OPTION VALUE="3">Intégrateur 
+                <OPTION VALUE="3">Chef de projet 
+            </SELECT>
+            <INPUT TYPE="button"NAME="b" VALUE="Afficher votre métier" onClick="_liste(choixJob)"> 
         </FORM>
 
     <h1><b>Exercice 13</b></h1>
@@ -166,7 +176,10 @@
 
                 // Exercice 6
                 function liste(form5) {
-                    alert("Genre : " + (form5.list.selectedIndex + 1)); }
+                    if (form5.list[0].selected) { alert("Vous êtes un homme")};
+                    if (form5.list[1].selected) { alert("Vous êtes une femme")};
+                    if (form5.list[2].selected) { alert("Vous en savez rien")};
+                    }
 
                 // Exercice 7
                 function reponse(form4) {
@@ -214,12 +227,19 @@
                 }
 
                 // Radio
-                function choixGenre(form3) {
+                function choixGenre(formGenre) {
                     if (formGenre.choix[0].checked) { alert("Vous êtes un grand garçon") };
                     if (formGenre.choix[1].checked) { alert("Salutation gente dame ")};
                     if (formGenre.choix[2].checked) { alert("Il faudrait bien trouver un jour")};
                     }
 
+                function _liste(choixJob) {
+                    if (choixJob.list[0].selected) { alert("Vous êtes un Développeur en Logiciel")};
+                    if (choixJob.list[1].selected) { alert("Vous êtes Designer web")};
+                    if (choixJob.list[2].selected) { alert("Vous êtes Intégrateur")};
+                    if (choixJob.list[3].selected) { alert("Vous êtes Chef de projet")};
+
+                }
 
             </script>
 
