@@ -124,10 +124,10 @@
         des accesseurs (get) et mutateurs (set) traditionnels. La vitesse initiale de chaque véhicule
         instancié est de 0. Une méthode personnalisée pourra afficher toutes les informations d’un
         véhicule. </p>
-    
-<?php
-        require "Cars.js";
-?>
+        <button onclick ="page_cars()">Voiture</button>
+
+        
+
         <footer>
             <p id="result"></p>
             <script>
@@ -246,6 +246,12 @@
                     if (choixJob.list[1].selected) { alert("Vous êtes Designer web")};
                     if (choixJob.list[2].selected) { alert("Vous êtes Intégrateur")};
                     if (choixJob.list[3].selected) { alert("Vous êtes Chef de projet")};
+                }
+
+                // Exercice 13
+                function page_cars(){
+
+                    window.location.href = 'cars.php';
                 }
 
                
