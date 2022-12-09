@@ -349,7 +349,7 @@ $v2 = new Voiture("Citroën","C4",3, 200);
 
 // GAME START ( ͡👁️ ͜ʖ ͡👁️)👍
 $v1->getDemarrer();
-$v1->setAccelerer(50);
+$v1->setAccelerer+(50);
 
 $v2->getDemarrer();
 $v2->getStopper();

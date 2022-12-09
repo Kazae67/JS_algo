@@ -1,5 +1,8 @@
 // Class 🏠🧔👩
+
+
 class Car {
+    
     // Construt 🔒
     constructor(marque, modele, nbPortes) {
         this._marque = marque;
@@ -59,16 +62,11 @@ class Car {
             this.statut = true;
             document.getElementById("demarrer").innerHTML = "Le véhicule [" + this.marque + " " + this.modele + "]: démarre <br>";
         }
+        
     }
-
-    
-
-
-
-
-
-            
-    
 
 
 }
+var v1 = new Car("Peugeot", "408", 5);
+v1.getDemarrer();
+console.log(v1);
