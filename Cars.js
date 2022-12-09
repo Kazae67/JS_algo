@@ -89,7 +89,7 @@ class Car {
     // Accélérer 🚗💨
     Accelerer() {
         if(this._statut) {
-            this._vitesseActuelle += this._vitesseActuelle;
+            this._vitesseActuelle;
             document.getElementById("accelerer").innerHTML = "Le véhicule [" + this._marque + " " + this._modele + "]: accélère de " + this._vitesseActuelle + " km /h <br>";
         } else {
             document.getElementById("accelerer").innerHTML = "Pour accélérer, il faut démarrer le véhicule [" + this._marque + " " + this._modele + "] !<br>";
@@ -132,9 +132,9 @@ class Car {
 
 var v1 = new Car("Peugeot", "408", 5);
 var v2 = new Car("Citroën", "C4", 3)
+v1.setVitesseActuelle = 10;
 v1.Demarrer();
-v1.Accelerer(20);
+v1.Accelerer();
 v2.DemarrerV2();
 v2.Stopper();
-v1.setVitesseActuelle = 20;
-console.log(v1.vitesseActuelle);
+console.log(v1);
