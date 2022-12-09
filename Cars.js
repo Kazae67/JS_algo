@@ -9,7 +9,7 @@ class Car {
         this._modele = modele;
         this._nbPortes = nbPortes;
         this._vitesseActuelle = 0;
-        this._statut = false;
+        this._statut = true;
     }
 
     // Getters 🔑
@@ -57,7 +57,7 @@ class Car {
     // Démarrer ✔
     getDemarrer(){
         if(this._statut){
-            document.getElementById("demarrer").innerHTML = "Le véhicule " + this._marque + " est déjà démarré <br>";
+            document.getElementById("demarrer").innerHTML = "Le véhicule [" + this._marque + " " + this._modele +  "] est déjà démarré <br>";
         }else {
             this._statut = true;
             document.getElementById("demarrer").innerHTML = "Le véhicule [" + this._marque + " " + this._modele + "]: démarre <br>";
