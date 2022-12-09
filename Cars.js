@@ -55,7 +55,7 @@ class Car {
     }
 
     // Démarrer ✔
-    getDemarrer(){
+    Demarrer(){
         if(this._statut){
             document.getElementById("demarrer").innerHTML = "Le véhicule [" + this._marque + " " + this._modele +  "] est déjà démarré <br>";
         }else {
@@ -65,8 +65,43 @@ class Car {
         
     }
 
+    // Démarrer 2 ✔ 
+    DemarrerV2(){
+        if(this._statut){
+            document.getElementById("demarrerV2").innerHTML = "Le véhicule [" + this._marque + " " + this._modele +  "] est déjà démarré <br>";
+        }else {
+            this._statut = true;
+            document.getElementById("demarrerV2").innerHTML = "Le véhicule [" + this._marque + " " + this._modele + "]: démarre <br>";
+        }
+        
+    }
+
+    // Accélérer 🚗💨
+    Accelerer() {
+        if(this._statut) {
+            this._vitesseActuelle += this._vitesseActuelle;
+            document.getElementById("accelerer").innerHTML = "Le véhicule [" + this._marque + " " + this._modele + "]: accélère de " + this._vitesseActuelle + " km /h <br>";
+        } else {
+            document.getElementById("accelerer").innerHTML = "Pour accélérer, il faut démarrer le véhicule [" + this._marque + " " + this._modele + "] !<br>";
+        }
+    }
+
+    // Stopper ⚠
+    Stopper() {
+        if(this._statut == false) {
+            document.getElementById("stopper").innerHTML = "Le véhicule: [" + this_marque + "] est déjà stoppé <br>";
+        } else {
+            this._statut = false;
+            this._vitesseActuelle = 0;
+            document.getElementById("stopper").innerHTML = "Le véhicule [" + this._marque + " " + this._modele + "]: est stoppé <br>";
+        }
+    }
 
 }
 var v1 = new Car("Peugeot", "408", 5);
-v1.getDemarrer();
+var v2 = new Car("Citroën", "C4", 3)
+v1.Demarrer();
+v1.Accelerer();
+v2.DemarrerV2();
+v2.Stopper();
 console.log(v1);

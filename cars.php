@@ -8,6 +8,9 @@
 </head>
 <body>
 <p id="demarrer"></p>
+<p id="accelerer"></p>
+<p id="demarrerV2"></p>
+<p id="stopper"></p>
 
 
     <footer>
