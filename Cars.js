@@ -56,11 +56,11 @@ class Car {
 
     // Démarrer ✔
     getDemarrer(){
-        if(this.statut){
-            document.getElementById("demarrer").innerHTML = "Le véhicule " + this.marque + " est déjà démarré <br>";
+        if(this.getStatut){
+            document.getElementById("demarrer").innerHTML = "Le véhicule " + this.getMarque + " est déjà démarré <br>";
         }else {
             this.statut = true;
-            document.getElementById("demarrer").innerHTML = "Le véhicule [" + this.marque + " " + this.modele + "]: démarre <br>";
+            document.getElementById("demarrer").innerHTML = "Le véhicule [" + this.getMarque + " " + this.getModele + "]: démarre <br>";
         }
         
     }
