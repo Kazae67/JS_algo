@@ -11,6 +11,9 @@
 <p id="accelerer"></p>
 <p id="demarrerV2"></p>
 <p id="stopper"></p>
+<p id="accelererV2"></p>
+<p id="accelerer"></p>
+
 
 
     <footer>

@@ -14,19 +14,19 @@ class Car {
 
     // Getters 🔑
     get marque(){
-        return this._marque();
+        return this._marque;
     }
 
     get modele(){
-        return this._modele();
+        return this._modele;
     }
     
     get nbPortes(){
-        return this._nbPortes();
+        return this._nbPortes;
     }
 
     get vitesseActuelle(){
-        return this._vitesseActuelle();
+        return this._vitesseActuelle;
     }
 
     get statut() {
@@ -46,8 +46,8 @@ class Car {
         this._nbPortes = nbPortes;
     }
 
-    set vitesseActuelle(vitesseActuelle){
-        this._vitesseActuelle = vitesseActuelle;
+    set setVitesseActuelle(vitesse){
+        this._vitesseActuelle = vitesse;
     }
 
     set statut(statut){
@@ -76,6 +76,16 @@ class Car {
         
     }
 
+    // Start ✔ 
+    Start() {
+        if(this._statut) {
+            document.getElementById("start").innerHTML = "";
+        } else {
+            this.statut = true;
+            document.getElementById("start").innerHTML = "";
+        }
+    }
+
     // Accélérer 🚗💨
     Accelerer() {
         if(this._statut) {
@@ -86,6 +96,27 @@ class Car {
         }
     }
 
+    // Accélérer 2 🚗💨
+    AccelererV2() {
+        if(this._statut) {
+            this._vitesseActuelle += this._vitesseActuelle;
+            document.getElementById("accelererV2").innerHTML = "Le véhicule [ " + this._marque + " " + this._modele + "]: veut accélerer de " + this._vitesseActuelle + "<br>";
+        } else {
+            document.getElementById("accelererV2").innerHTML = "Pour accélérer, il faut démarrer le véhicule [" + this._marque + " " + this._modele + "] !<br>";
+        }
+    }
+    
+
+    // Stop⚠
+    Stop() {
+        if(this._statut == false) {
+            document.getElementById("stop").innerHTML = "";
+        } else {
+            this._statut = false;
+            this._vitesseActuelle = 0;
+            document.getElementById("stop").innerHTML = "";
+        }
+    }
     // Stopper ⚠
     Stopper() {
         if(this._statut == false) {
@@ -97,11 +128,13 @@ class Car {
         }
     }
 
-}
+} 
+
 var v1 = new Car("Peugeot", "408", 5);
 var v2 = new Car("Citroën", "C4", 3)
 v1.Demarrer();
-v1.Accelerer();
+v1.Accelerer(20);
 v2.DemarrerV2();
 v2.Stopper();
-console.log(v1);
+v1.setVitesseActuelle = 20;
+console.log(v1.vitesseActuelle);
