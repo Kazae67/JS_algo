@@ -250,11 +250,10 @@
 
                 // Exercice 13
                 function page_cars(){
-
-                    window.location.href = 'cars.php';
+                    window.open("cars.php", "_blank");
                 }
 
-               
+          
 
                 </script>
 
