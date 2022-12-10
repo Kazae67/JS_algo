@@ -99,10 +99,20 @@ class Car {
     // Accélérer 2 🚗💨
     AccelererV2() {
         if(this._statut) {
-            this._vitesseActuelle += this._vitesseActuelle;
+            this._vitesseActuelle;
             document.getElementById("accelererV2").innerHTML = "Le véhicule [ " + this._marque + " " + this._modele + "]: veut accélerer de " + this._vitesseActuelle + "<br>";
         } else {
             document.getElementById("accelererV2").innerHTML = "Pour accélérer, il faut démarrer le véhicule [" + this._marque + " " + this._modele + "] !<br>";
+        }
+    }
+
+    // Accélérer 3 🚗💨
+    Accelerer3() {
+        if(this._statut) {
+            this._vitesseActuelle;
+            document.getElementById("accelererV2").innerHTML = "La vitesse du véhucule [" + this._marque +  " " + this._modele + "] est de : " + _vitesseActuelle + " km / h <br>";
+        } else {
+            document.getElementById("accelererV2").innerHTML = "Pour accélérer, il faut démarrer le véhicule [" + this._marque +  " " + this._modele + "] !<br>";
         }
     }
     
@@ -132,9 +142,15 @@ class Car {
 
 var v1 = new Car("Peugeot", "408", 5);
 var v2 = new Car("Citroën", "C4", 3)
-v1.setVitesseActuelle = 10;
+v1.setVitesseActuelle = 50;
+v2.setVitesseActuelle = 10
+
 v1.Demarrer();
 v1.Accelerer();
 v2.DemarrerV2();
 v2.Stopper();
-console.log(v1);
+v2.Demarrer();
+v2.AccelererV2();
+v2.Stopper();
+v2.Accelerrer();
+console.log(v2);
